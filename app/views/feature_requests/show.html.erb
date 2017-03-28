@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @feature_request.title %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @feature_request.description %>
+</p>
+
+<p>
+  <strong>Clientpriority:</strong>
+  <%= @feature_request.clientpriority %>
+</p>
+
+<p>
+  <strong>Targetdate:</strong>
+  <%= @feature_request.targetdate %>
+</p>
+
+<p>
+  <strong>Ticketurl:</strong>
+  <%= @feature_request.ticketurl %>
+</p>
+
+<p>
+  <strong>Productarea:</strong>
+  <%= @feature_request.productarea %>
+</p>
+
+<p>
+  <strong>Client:</strong>
+  <%= @feature_request.client %>
+</p>
+
+<%= link_to 'Edit', edit_feature_request_path(@feature_request) %> |
+<%= link_to 'Back', feature_requests_path %>

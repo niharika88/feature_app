@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Feature Requests</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Description</th>
+      <th>Clientpriority</th>
+      <th>Targetdate</th>
+      <th>Ticketurl</th>
+      <th>Productarea</th>
+      <th>Client</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @feature_requests.each do |feature_request| %>
+      <tr>
+        <td><%= feature_request.title %></td>
+        <td><%= feature_request.description %></td>
+        <td><%= feature_request.clientpriority %></td>
+        <td><%= feature_request.targetdate %></td>
+        <td><%= feature_request.ticketurl %></td>
+        <td><%= feature_request.productarea %></td>
+        <td><%= feature_request.client %></td>
+        <td><%= link_to 'Show', feature_request %></td>
+        <td><%= link_to 'Edit', edit_feature_request_path(feature_request) %></td>
+        <td><%= link_to 'Destroy', feature_request, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Feature Request', new_feature_request_path %>
